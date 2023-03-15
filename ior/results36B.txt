@@ -1,0 +1,107 @@
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 01:07:09 2023
+Command line        : ./src/ior -t 128m -b 36g -s 36 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 01:07:09 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 36
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 128 MiB
+blocksize           : 36 GiB
+aggregate filesize  : 2.53 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Task 0, partial write(), 1560576 of 134217728 bytes at offset 637534208000
+WARNING: Task 0, partial write(), 512000 of 132657152 bytes at offset 637535768576
+WARNING: Task 0, partial write(), 2084864 of 132145152 bytes at offset 637536280576
+WARNING: Task 0, partial write(), 2084864 of 130060288 bytes at offset 637538365440
+WARNING: Task 0, partial write(), 2084864 of 127975424 bytes at offset 637540450304
+WARNING: Task 0, partial write(), 2084864 of 125890560 bytes at offset 637542535168
+WARNING: Task 0, partial write(), 2084864 of 123805696 bytes at offset 637544620032
+WARNING: Task 0, partial write(), 2084864 of 121720832 bytes at offset 637546704896
+WARNING: Task 0, partial write(), 1658880 of 119635968 bytes at offset 637548789760
+ior ERROR: write(16, 0x7fdbacf7c000, 117977088) failed, errno 28, No space left on device (aiori-POSIX.c:534)
+t 128m has been completed
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 12:47:02 2023
+Command line        : ./src/ior -t 256m -b 36g -s 36 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 12:47:02 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 34.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 36
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 256 MiB
+blocksize           : 36 GiB
+aggregate filesize  : 2.53 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+ior ERROR: write(16, 0x7f0e9ffff000, 268435456) failed, errno 28, No space left on device (aiori-POSIX.c:534)
+ior ERROR: write(16, 0x7ff9affff000, 268435456) failed, errno 28, No space left on device (aiori-POSIX.c:534)
+t 256m has been completed
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 17:43:45 2023
+Command line        : ./src/ior -t 512m -b 36g -s 36 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 17:43:45 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 2.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 36
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 512 MiB
+blocksize           : 36 GiB
+aggregate filesize  : 2.53 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
