@@ -1,0 +1,167 @@
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 11:19:19 2023
+Command line        : ./src/ior -t 8m -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 11:19:19 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 55.4%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 8 MiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     14.94      1.87       4.27        4194304    8192       0.006448   2193.47    4.76       2193.48    0   
+read      27.95      3.49       1.72        4194304    8192       0.002935   1172.40    292.30     1172.41    0   
+remove    -          -          -           -          -          -          -          -          0.010816   0   
+Max Write: 14.94 MiB/sec (15.66 MB/sec)
+Max Read:  27.95 MiB/sec (29.31 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          14.94      14.94      14.94       0.00       1.87       1.87       1.87       0.00 2193.48219         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296  8388608   32768.0 POSIX      0
+read           27.95      27.95      27.95       0.00       3.49       3.49       3.49       0.00 1172.40976         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296  8388608   32768.0 POSIX      0
+Finished            : Thu May  4 12:15:25 2023
+****************************************t 8m has been completed*****************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 12:15:27 2023
+Command line        : ./src/ior -t 16m -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 12:15:27 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 58.6%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     29.03      1.81       4.41        4194304    16384      0.006087   1128.56    0.053487   1128.57    0   
+read      104.10     6.51       1.23        4194304    16384      0.002776   314.78     0.488169   314.78     0   
+remove    -          -          -           -          -          -          -          -          0.007911   0   
+Max Write: 29.03 MiB/sec (30.45 MB/sec)
+Max Read:  104.10 MiB/sec (109.15 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          29.03      29.03      29.03       0.00       1.81       1.81       1.81       0.00 1128.57208         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 16777216   32768.0 POSIX      0
+read          104.10     104.10     104.10       0.00       6.51       6.51       6.51       0.00  314.78251         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 16777216   32768.0 POSIX      0
+Finished            : Thu May  4 12:39:30 2023
+****************************************t 16m has been completed****************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 12:39:32 2023
+Command line        : ./src/ior -t 32m -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 12:39:32 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 59.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 32 MiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 34359738368.
+WARNING: Stat() of aggregate file size      = 20937965568.
+WARNING: Using actual aggregate bytes moved = 34359738368.
+write     41.20      1.29       6.21        4194304    32768      0.008499   794.89     1.93       795.38     0   
+WARNING: Expected aggregate file size       = 34359738368.
+WARNING: Stat() of aggregate file size      = 296889614336.
+WARNING: Using actual aggregate bytes moved = 34359738368.
+read      12.04      0.376868   21.21       4194304    32768      0.001897   2717.13    7.10       2721.71    0   
+remove    -          -          -           -          -          -          -          -          0.040803   0   
+Max Write: 41.20 MiB/sec (43.20 MB/sec)
+Max Read:  12.04 MiB/sec (12.62 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          41.20      41.20      41.20       0.00       1.29       1.29       1.29       0.00  795.38151         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 33554432   32768.0 POSIX      0
+read           12.04      12.04      12.04       0.00       0.38       0.38       0.38       0.00 2721.70555         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 33554432   32768.0 POSIX      0
+Finished            : Thu May  4 13:38:17 2023
+****************************************t 32m has been completed*****************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 13:38:19 2023
+Command line        : ./src/ior -t 64m -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Thu May  4 13:38:19 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 11.6%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 64 MiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     36.07      0.563630   14.16       4194304    65536      0.007570   908.40     1.89       908.40     0   

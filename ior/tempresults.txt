@@ -1,0 +1,307 @@
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 10:17:38 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 1g -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 10:17:38 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 1 GiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     29.88      0.029175   273.57      4194304    1048576    0.004180   1096.83    2.53       1096.84    0   
+read      29.91      0.029208   271.50      4194304    1048576    0.001363   1095.59    9.59       1095.59    0   
+remove    -          -          -           -          -          -          -          -          0.001746   0   
+Max Write: 29.88 MiB/sec (31.33 MB/sec)
+Max Read:  29.91 MiB/sec (31.36 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          29.88      29.88      29.88       0.00       0.03       0.03       0.03       0.00 1096.83586         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 1073741824   32768.0 POSIX      0
+read           29.91      29.91      29.91       0.00       0.03       0.03       0.03       0.00 1095.59414         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 1073741824   32768.0 POSIX      0
+Finished            : Wed May  3 10:54:11 2023
+**********************************************************************b=4 t=1 is done***********************************************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 10:54:13 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 2g -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 10:54:13 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 GiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 0
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 0
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 2147483648
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 2147483648
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 4294967296
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 4294967296
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 6442450944
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 6442450944
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 8589934592
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 8589934592
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 10737418240
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 10737418240
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 12884901888
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 12884901888
+WARNING: Task 0, partial write(), 2147479552 of 2147483648 bytes at offset 15032385536
+WARNING: Task 1, partial write(), 2147479552 of 2147483648 bytes at offset 15032385536
+write     22.41      0.010945   730.91      4194304    2097152    0.003595   1461.88    0.056556   1461.88    0   
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 0
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 0
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 2147483648
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 2147483648
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 4294967296
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 4294967296
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 6442450944
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 6442450944
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 8589934592
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 8589934592
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 10737418240
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 10737418240
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 12884901888
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 12884901888
+WARNING: Task 0, partial read(), 2147479552 of 2147483648 bytes at offset 15032385536
+WARNING: Task 1, partial read(), 2147479552 of 2147483648 bytes at offset 15032385536
+read      22.44      0.010957   730.11      4194304    2097152    0.001190   1460.31    0.083380   1460.31    0   
+remove    -          -          -           -          -          -          -          -          0.002643   0   
+Max Write: 22.41 MiB/sec (23.50 MB/sec)
+Max Read:  22.44 MiB/sec (23.53 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          22.41      22.41      22.41       0.00       0.01       0.01       0.01       0.00 1461.88192         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 2147483648   32768.0 POSIX      0
+read           22.44      22.44      22.44       0.00       0.01       0.01       0.01       0.00 1460.31120         NA            NA     0      2   2    1   1     1        1         0    0      4 4294967296 2147483648   32768.0 POSIX      0
+Finished            : Wed May  3 11:42:58 2023
+**********************************************************************b=4 t=2 is done***********************************************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 11:43:01 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 4g -b 4g -s 4 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 11:43:01 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 4
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 4 GiB
+blocksize           : 4 GiB
+aggregate filesize  : 32 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+**********************************************************************b=4 t=4 is done***********************************************************************
+**********************************************************************block size=4 is done***********************************************************************
+**********************************************************************block size=9 is starting***********************************************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 11:46:39 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 1g -b 9g -s 3 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 11:46:39 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 3
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 1 GiB
+blocksize           : 9 GiB
+aggregate filesize  : 54 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     29.83      0.029127   204.01      9437184    1048576    0.003274   1853.95    17.87      1853.95    0   
+read      29.92      0.029215   203.44      9437184    1048576    0.001332   1848.39    17.42      1848.40    0   
+remove    -          -          -           -          -          -          -          -          0.002720   0   
+Max Write: 29.83 MiB/sec (31.27 MB/sec)
+Max Read:  29.92 MiB/sec (31.37 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          29.83      29.83      29.83       0.00       0.03       0.03       0.03       0.00 1853.95407         NA            NA     0      2   2    1   1     1        1         0    0      3 9663676416 1073741824   55296.0 POSIX      0
+read           29.92      29.92      29.92       0.00       0.03       0.03       0.03       0.00 1848.39581         NA            NA     0      2   2    1   1     1        1         0    0      3 9663676416 1073741824   55296.0 POSIX      0
+Finished            : Wed May  3 12:48:22 2023
+**********************************************************************b=9 t=1 is done***********************************************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 12:48:24 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 3g -b 9g -s 3 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 12:48:24 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 3
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 3 GiB
+blocksize           : 9 GiB
+aggregate filesize  : 54 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 0
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 3221225472
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 6442450944
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 9663676416
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 12884901888
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 16106127360
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 19327352832
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 22548578304
+WARNING: Task 0, partial write(), 2147479552 of 3221225472 bytes at offset 25769803776
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 0
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 3221225472
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 6442450944
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 9663676416
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 12884901888
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 16106127360
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 19327352832
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 22548578304
+WARNING: Task 1, partial write(), 2147479552 of 3221225472 bytes at offset 25769803776
+write     32.27      0.010504   107.78      9437184    3145728    0.003334   1713.66    1390.25    1713.70    0   
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 0
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 0
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 3221225472
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 6442450944
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 9663676416
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 12884901888
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 3221225472
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 16106127360
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 19327352832
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 22548578304
+WARNING: Task 0, partial read(), 2147479552 of 3221225472 bytes at offset 25769803776
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 6442450944
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 9663676416
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 12884901888
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 16106127360
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 19327352832
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 22548578304
+WARNING: Task 1, partial read(), 2147479552 of 3221225472 bytes at offset 25769803776
+read      44.65      0.014533   123.33      9437184    3145728    0.001721   1238.54    868.57     1238.57    0   
+remove    -          -          -           -          -          -          -          -          0.003190   0   
+Max Write: 32.27 MiB/sec (33.83 MB/sec)
+Max Read:  44.65 MiB/sec (46.81 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          32.27      32.27      32.27       0.00       0.01       0.01       0.01       0.00 1713.70033         NA            NA     0      2   2    1   1     1        1         0    0      3 9663676416 3221225472   55296.0 POSIX      0
+read           44.65      44.65      44.65       0.00       0.01       0.01       0.01       0.00 1238.56781         NA            NA     0      2   2    1   1     1        1         0    0      3 9663676416 3221225472   55296.0 POSIX      0
+Finished            : Wed May  3 13:38:01 2023
+**********************************************************************b=9 t=3 is done***********************************************************************
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed May  3 13:38:10 2023
+Command line        : /mnt/beegfs/ior-3.3.0/src/ior -t 9g -b 9g -s 3 -F -C -e
+Machine             : Linux dashlab3
+TestID              : 0
+StartTime           : Wed May  3 13:38:10 2023
+Path                : /mnt/beegfs/ior-3.3.0
+FS                  : 2.7 TiB   Used FS: 1.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : testFile
+access              : file-per-process
+type                : independent
+segments            : 3
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 9 GiB
+blocksize           : 9 GiB
+aggregate filesize  : 54 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+**********************************************************************b=9 t=9 is done***********************************************************************
+**********************************************************************block size=9 is done***********************************************************************
